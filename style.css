@@ -1,0 +1,24 @@
+body{
+    padding: 10%;
+    text-size-adjust: auto;
+}
+
+h1{
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: blueviolet;
+    
+}
+
+.question{
+    text-align: start ;
+    font-family: inherit;
+    color: black;
+}
+
+.answers{
+    text-align: start;
+    font-family: inherit;
+    color: white;
+    background-color: rebeccapurple;
+}
