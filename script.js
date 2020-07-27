@@ -8,7 +8,7 @@ function buildQuiz() {
     const output = []
     const answers = []
 
-    quizQuestions.forEach((currentQuestion, questionNumber)
+
 
 let quizQuestions = [
         {
@@ -19,7 +19,7 @@ let quizQuestions = [
                 c: "Hyperlink Textual Markup Language",
                 d: "Hyper Text Markdown Language"
             },
-            correctAnswer: "a"
+            correctAnswer: "a",
         },
         {
             question: "Which character is used to indicate an end tag?",
@@ -28,34 +28,35 @@ let quizQuestions = [
                 b: "#",
                 c: "/",
                 d: "~"
-            }
-    correctAnswer: : "c" },
-        {
+            },
+    correctAnswer: "c" ,
+        },
+    {
             question: "In what order do you designate border sizes?",
             answers: {
                 a: "Top, right, bottom, left",
                 b: "Top, bottom, left, right",
                 c: "Left, right, top, bottom"
-            }
+            },
     correctAnswer: "a"
         },
         {
-            question: "How would you select an element with the class name 'example'?, 
+            question: "How would you select an element with the class name 'example'?", 
     answers: {
                 a: "example",
                 b: "for (example)",
                 c: "#example",
                 d: ".example"
             },
-            correctAnswer: "d"
+            correctAnswer: "d",
         },
         {
             question: "What will the following return: Boolean(5 > 10)",
             answers: {
                 a: "True",
                 b: "False"
-            }
-    correctAnswer: "b"
+            },
+    correctAnswer: "b",
         },
         {
             question: "The bootstrap grid system is based on how many columns?",
@@ -65,8 +66,8 @@ let quizQuestions = [
                 c: "12",
                 d: "10"
             },
-            correctAnswer: "c"
-        }
+            correctAnswer: "c",
+        },
     {
             question: "Which plugin is used to cycle through elements, one after another, like a slideshow?",
             answers: {
@@ -83,7 +84,7 @@ let quizQuestions = [
                 a: "True",
                 b: "False"
             },
-            correctAnswer: "a"
+            correctAnswer: "a",
         },
         {
             question: "How does a for loop start?",
@@ -93,38 +94,42 @@ let quizQuestions = [
                 c: "if (condition) {} else {}",
                 d: "for (i > x;) let i = 0"
             },
-            correctAnswer: "b"
+            correctAnswer: "b",
         },
         {
             question: "Javascript and Java are the same thing.",
             answers: {
                 a: "True",
                 b: "False"
-            }
-    correctAnswer: "b"
+            },
+    correctAnswer: "b",
         },
+     
     ];
+    // quizQuestions.forEach((currentQuestion, questionNumber), 
 
 
 
-
-    for (letter in currentQuestion.answers) {
-        answers.push(
-            <label>
-                <input type="radio" name="question${questionNumber}" value="$letter">
-                    ${letter} :
-                        ${currentQuestion.answers[letter]}
-                    </label>
-                )
-            }
-            {output.push(
-                    <div class="question"> ${currentQuestion.question} </div>
-                    <div class="answers"> ${answers.join('')} </div>
-            )}
-        }
-    )
+    // for (letter in currentQuestion.answers) {
+    //     answers.push(
+    //         <label>
+    //             <input type="radio" name="question${questionNumber}" value="$letter">
+    //                 ${letter} :
+    //                     ${currentQuestion.answers[letter]}
+    //                 </label>
+    //             )
+    //         }
+    //         {output.push(
+    //                 <div class="question"> ${currentQuestion.question} </div>
+    //                 <div class="answers"> ${answers.join('')} </div>
+    //         )}, 
+    //     }
+    // )
 quizContainer.innerHTML = output.join('');
 
+
+
+//changes the color of the button when clicked
 
     var themeSwitcher = document.querySelector("#theme-switcher");
     var container = document.querySelector(".answers");
@@ -169,10 +174,24 @@ function score() {
 
                 };
 
+                
+                var quizTime = 120
+                var timer = document.getElementsByClassName(".timer");
+                var answers = document.getElementById("");
+                
 
-}
+                function quizTimer() {
+                    append(timer);
+                  
 
-
+                        var timeInterva = setInterval(function() {
+                          timerEl.textContent = quizTime + " seconds remaining";
+                         quizTime--;
+                                         
+                
+                  
+                    }, 1000);
+                  }
 
 
 
