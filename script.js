@@ -124,8 +124,24 @@ let quizQuestions = [
         }
     )
 quizContainer.innerHTML = output.join('');
+
+
+    var themeSwitcher = document.querySelector("#theme-switcher");
+    var container = document.querySelector(".answers");
+    var mode = "dark";
+
+    themeSwitcher.addEventListener("click", function() {
+     if (mode === "dark") {
+                    mode = "light";
+        answers.setAttribute("class", "light");
+     }
+     else {
+                    mode = "dark";
+        answers.setAttribute("class", "dark");
+     }
+    });
 }
-});
+
 
 
 
