@@ -1,4 +1,4 @@
-
+// let question = []
 
 let quizQuestions = [
     {
@@ -23,74 +23,73 @@ correctAnswer: "c" ,
     },
 {
         question: "In what order do you designate border sizes?",
-         answers: {
-            a: "Top, right, bottom, left",
-            b: "Top, bottom, left, right",
-            c: "Left, right, top, bottom"
-        },
+         answers: [
+             "Top, right, bottom, left",
+             "Top, bottom, left, right",
+             "Left, right, top, bottom", 
+             "Right, left, top, bottom"
+         ],
 correctAnswer: "a"
     },
     {
         question: "How would you select an element with the class name 'example'?", 
-         answers: {
-            a: "example",
-            b: "for (example)",
-            c: "#example",
-            d: ".example"
-        },
+         answers: [
+             "example",
+             "for (example)",
+             "#example",
+             ".example"
+         ],
         correctAnswer: "d",
     },
     {
         question: "The bootstrap grid system is based on how many columns?",
-         answers: {
-            a: "6",
-            b: "1000",
-            c: "12",
-            d: "10"
-        },
+         answers: [
+             "6",
+             "1000",
+             "12",
+             "10"
+         ],
         correctAnswer: "c",
     },
 {
         question: "Which plugin is used to cycle through elements, one after another, like a slideshow?",
-         answers: {
-            a: "Carousel",
-            b: "Fluid container",
-            c: "Merry-go-round",
-            d: "Cycle"
-        },
+         answers: [
+             "Carousel",
+             "Fluid container",
+             "Merry-go-round",
+             "Cycle"
+         ],
         correctAnswer: "a"
     },
     {
         question: "How does a for loop start?",
-         answers: {
-            a: "let i = 0",
-            b: "for (i = 0; i > 5; i++)",
-            c: "if (condition) {} else {}",
-            d: "for (i > x;) let i = 0"
-        },
+         answers: [
+             "let i = 0",
+             "for (i = 0; i > 5; i++)",
+             "if (condition) {} else {}",
+             "for (i > x;) let i = 0"
+         ],
         correctAnswer: "b",
     },
  
  
 ];
 
-let questionNameH3 = document.querySelector("#quizQuestions")
 
-//make a variable instead of 1 of something like current question
-questionNameH3.textContent = quizQuestions[currentQuestion].question
+let questionNameH3 = document.querySelector("#quizQuestions");
+
+questionNameH3.textContent = quizQuestions[0].question;
 
 
 let firstAnswerChoiceLi = document.querySelector("#answerChoice1")
 let secondAnswerChoiceLi = document.querySelector("#answerChoice2")
 let thirdAnswerChoiceLi = document.querySelector("#answerChoice3")
-let fourthAnswerChoiceLi = document.querySelector("#answerChoice4")
+let fourthAnswerChoiceLi = document.querySelector("#answerChoice4");
 
-
-
-firstAnswerChoiceLi.textContent = quizQuestions[1].answers[0]
-secondAnswerChoiceLi.textContent = quizQuestions[1].answers[1]
-thirdAnswerChoiceLi.textContent = quizQuestions[1].answers[2]
-fourthAnswerChoiceLi.textContent = quizQuestions[1].answers[3]
+firstAnswerChoiceLi.textContent = quizQuestions[0].answers[0]
+secondAnswerChoiceLi.textContent = quizQuestions[0].answers[1]
+thirdAnswerChoiceLi.textContent = quizQuestions[0].answers[2]
+fourthAnswerChoiceLi.textContent = quizQuestions[0].answers[3];
 
 
 
